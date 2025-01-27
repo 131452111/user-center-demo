@@ -67,6 +67,21 @@ const route = [
         ]
       },
     ]
+  },
+  {
+    path: '/biliLayout',
+    name: 'B站首页',
+    component: () => import('@/views/bili-layout/index.vue'),
+  },
+  {
+    path: '/biliDynamic',
+    name: 'B站动态',
+    component: () => import('@/views/bili-dynamic/index.vue'),
+  },
+  {
+    path: '/github',
+    name: 'Github项目页',
+    component: () => import('@/views/github/index.vue'),
   }
 ]
 

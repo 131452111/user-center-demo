@@ -5,7 +5,7 @@ import router from '@/router'
 import { ref } from 'vue'
 import { useUserStore } from '@/stores'
 import { Search } from '@element-plus/icons-vue'
-import { ElMessage, ElMessageBox } from 'element-plus'
+import { ElMessageBox } from 'element-plus'
 
 // 展示在菜单栏的路由数组
 const VisibleRoutes = routes.filter((item) => {
@@ -105,7 +105,7 @@ const handleCommand = async (command: string) => {
 </template>
 
 <style scoped lang="less">
-.el-menu--horizontal > .el-menu-item:nth-child(3) {
+.el-menu--horizontal > .el-menu-item:nth-child(6) {
   margin-right: auto;
 }
 </style>
