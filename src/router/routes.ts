@@ -11,7 +11,7 @@ const route = [
   {
     path: '/user',
     name: '用户',
-    component: UserLayout,
+    component: () => import('@/views/layout/BasicLayout.vue'),
     children: [
       {
         path: 'login',
@@ -28,6 +28,46 @@ const route = [
       hideInMenu: true
     }
   },
+  {
+    path: '/article',
+    name: '文章',
+    component: UserLayout,
+    redirect: '/article/layout/channel',
+    children: [
+      {
+        path: 'layout',
+        name: '布局',
+        component: () => import('@/views/article/ArticleLayout.vue'),
+        children: [
+          {
+            path: 'channel',
+            name: '分类',
+            component: () => import('@/views/article/ArticleChannel.vue')
+          },
+          {
+            path: 'manage',
+            name: '管理',
+            component: () => import('@/views/article/ArticleManage.vue')
+          },
+          {
+            path: 'info',
+            name: '用户详情',
+            component: () => import('@/views/user/UserInfo.vue')
+          },
+          {
+            path: 'avatar',
+            name: '更换头像',
+            component: () => import('@/views/user/ChangeAvatar.vue')
+          },
+          {
+            path: 'resetPassword',
+            name: '重置密码',
+            component: () => import('@/views/user/ResetPassword.vue')
+          },
+        ]
+      },
+    ]
+  }
 ]
 
 export default route

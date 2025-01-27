@@ -1,5 +1,7 @@
 <script setup lang="ts">
-
+defineOptions({
+  name: 'LogoComponent', // 符合 ESLint 要求
+})
 </script>
 
 <template>
