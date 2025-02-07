@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import GlobalHeader from '@/components/GlobalHeader.vue'
 import { useRoute } from 'vue-router'
-import UserLogin from '@/views/user/UserLogin.vue'
+import HomePage from '@/views/app/HomePage.vue'
 
 const route = useRoute()
 </script>
@@ -15,7 +15,7 @@ const route = useRoute()
       <!--end 顶部导航栏 -->
       <el-main>
         <template v-if="route.path === '/'">
-          <user-login />
+          <home-page />
         </template>
         <template v-else>
           <router-view />

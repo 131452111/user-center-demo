@@ -82,7 +82,16 @@ const route = [
     path: '/github',
     name: 'Github项目页',
     component: () => import('@/views/github/index.vue'),
-  }
+  },
+  {
+    path: '/app/detail/:id',
+    props: true,
+    name: '应用详情页',
+    component: () => import('@/views/app/AppDetail.vue'),
+    meta: {
+      hideInMenu: true
+    }
+  },
 ]
 
 export default route
