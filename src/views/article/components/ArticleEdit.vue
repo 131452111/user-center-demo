@@ -5,6 +5,22 @@ import { ElMessage, type UploadProps } from 'element-plus'
 import { QuillEditor } from '@vueup/vue-quill'
 import '@vueup/vue-quill/dist/vue-quill.snow.css'
 
+interface FormModel {
+  title: string, // 文章标题
+  cate_id: string, // 分类id
+  cover_img: string | File, // 封面图片 file 对象
+  content: string, // 文章内容
+  state: string, // 状态
+}
+
+interface Article {
+  id: number, title: string, pub_date: string, state: string, cate_name: string
+}
+
+interface UploadFile {
+  raw: File; // 或者根据实际情况定义 raw 的类型
+}
+
 // 向父组件提交数据
 const emit = defineEmits(['success'])
 // 控制抽屉显示隐藏
@@ -20,20 +36,9 @@ const defaultFormModel = {
   state: '', // 状态
 }
 
-interface FormModel {
-  title: string, // 文章标题
-  cate_id: string, // 分类id
-  cover_img: string | File, // 封面图片 file 对象
-  content: string, // 文章内容
-  state: string, // 状态
-}
 // 准备数据
 const formModel = ref<FormModel>({ ...defaultFormModel })
 const editorRef = ref()
-
-interface Article {
-  id: number, title: string, pub_date: string, state: string, cate_name: string
-}
 
 const open = (row: Article) => {
   visibleDrawer.value = true // 显示抽屉
@@ -67,10 +72,6 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
     return false
   }
   return true
-}
-
-interface UploadFile {
-  raw: File; // 或者根据实际情况定义 raw 的类型
 }
 
 const onSelectFile = (uploadFile: UploadFile) => {

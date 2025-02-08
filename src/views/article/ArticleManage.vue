@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PageContainer from '@/views/article/components/PageContainer.vue'
-import { ref } from 'vue'
+import { nextTick, ref } from 'vue'
 import { Delete, Edit } from '@element-plus/icons-vue'
 import ChannelSelect from '@/views/article/components/ChannelSelect.vue'
 import { ArticleListStore } from '@/stores/modules/articleManage.ts'
@@ -42,13 +42,15 @@ const onReset = () => {
 // 利用作用域插槽 row 可以获取当前行的数据 =>像 v-for 遍历 item
 
 // 添加文章
-const onAddArticle = () => {
+const onAddArticle = async () => {
   console.log('添加文章')
+  await nextTick()
   articleEditRef.value?.open({})
 }
 // 编辑逻辑
-const onEditArticle = (row: object) => {
+const onEditArticle = async (row: object) => {
   console.log(row)
+  await nextTick()
   articleEditRef.value?.open(row)
 }
 

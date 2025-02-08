@@ -39,7 +39,9 @@ const doCardClick = (id: number) => {
   console.log(`/app/detail/${+id}`)
   console.log(typeof id)
 }
-
+if(data.value.length === 0) {
+  getdata()
+}
 watchEffect(() => {
   data.value = appListStore.appList
   total.value = appListStore.appList.length
