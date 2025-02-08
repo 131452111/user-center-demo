@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PageContainer from '@/views/article/components/PageContainer.vue'
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { Delete, Edit } from '@element-plus/icons-vue'
 import ChannelSelect from '@/views/article/components/ChannelSelect.vue'
 import { ArticleListStore } from '@/stores/modules/articleManage.ts'
@@ -45,12 +45,17 @@ const onAddArticle = () => {
   articleEditRef.value.open({})
 }
 // 编辑逻辑
-const onEditArticle = (row) => {
-  console.log('添加分类')
+const onEditArticle = (row: object) => {
+  console.log(row)
   articleEditRef.value.open(row)
 }
+
+interface Article {
+  id: number, title: string, pub_date: string, state: string, cate_name: string
+}
+
 // 删除逻辑
-const onDeleteArticle = async (row) => {
+const onDeleteArticle = async (row: Article) => {
   if (typeof row.id === 'number') {
     await ElMessageBox.confirm('确定删除该分类吗？', '提示', {
       confirmButtonText: '确定',
@@ -109,6 +114,10 @@ const onSuccess = (state: string) => {
     params.value.page_num = lastPage
   }
 }
+
+watchEffect(() => {
+  onCurrentChange()
+})
 </script>
 
 <template>

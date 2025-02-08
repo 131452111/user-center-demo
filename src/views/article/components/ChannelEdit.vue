@@ -6,12 +6,20 @@ import { ElMessage } from 'element-plus'
 const article = articleStore()
 const dialogVisible = ref(false) // 控制弹窗显示隐藏
 const formDataRef = ref()
-const formData = ref({
+
+interface formData{
+  cate_name: string,
+  cate_alias: string,
+  id: number,
+  time: string | number
+}
+const formData = ref<formData>({
   cate_name: '',
   cate_alias: '',
   id: NaN,
   time: Date.now()
 })
+
 const rules = ref({
   cate_name: [
     { required: true, message: '请输入文章名称', trigger: 'blur' },
@@ -47,7 +55,10 @@ const onSubmit = async () => {
 // 组件对外暴露一个方法 open，基于open传来的参数，区分添加还是编辑
 // open({}) => {}  空对象则表示添加， open({id, cate_name, ...}) => {} 有值则表示编辑
 // open调用后可以打开弹窗
-const open = (row) => {
+interface currentData {id: number, cate_name: string, cate_alias: string, time: string}
+
+
+const open = (row: currentData) => {
   console.log(row)
   dialogVisible.value = true
   formData.value = { ...row }

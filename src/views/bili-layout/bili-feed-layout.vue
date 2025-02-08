@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import biliVideoCard from './bili-video-card.vue';
 import biliCarousel from './bili-carousel.vue';
 </script>

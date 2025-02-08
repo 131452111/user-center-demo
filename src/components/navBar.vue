@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 
 </script>
 
@@ -29,7 +29,7 @@
   <div class="right-entry">
     <ul class="nav_ul">
         <li><a href="#" class="a_avatar">
-          <img src="../../../public/logo.jpg" alt="" class="avatar">
+          <img src="@/../public/logo.jpg" alt="" class="avatar">
         </a></li>
         <li class="bili_vip">
           <a href="#">

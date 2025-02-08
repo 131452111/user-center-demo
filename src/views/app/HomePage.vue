@@ -52,7 +52,7 @@ watchEffect(() => {
     <el-button @click="getdata">获取数据</el-button>
     <el-row :gutter="20">
       <el-col :xs="4" :sm="24" :md="12" :lg="8" :xl="6" v-for="item in data" :key="item.id">
-        <el-card :header="item.appName" shadow="hover" style="margin: 20px 0 0" @click="doCardClick(item.id)">
+        <el-card :header="item.appName" shadow="hover" style="margin: 20px 0 0" @click="doCardClick(Number(item.id))">
           <div class="content flex flex-col">
             <div class="top w-full h-32 mb-10">
               <img src="../../assets/img/hero.jpg" :alt="item.appName" class="h-32">

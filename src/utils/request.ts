@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = 'http://127.0.0.1:4523/m1/5585646-5263628-default'
+const baseUrl = 'https://apifoxmock.com/m1/5585646-5263628-default'
 
 const instance = axios.create({
   baseURL: baseUrl,

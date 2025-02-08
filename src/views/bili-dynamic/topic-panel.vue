@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import relevantTopicContainer from '@/views/bili-dynamic/relevant-topic-container.vue'
 </script>
 

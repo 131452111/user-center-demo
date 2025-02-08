@@ -1,5 +1,5 @@
-<script setup>
-import AuthorDynamicCard from '@/views/bili-dynamic/author-dynamic-card.vue'
+<script setup lang="ts">
+import AuthorDynamicCard from '@/views/bili-dynamic/Author-dynamic-card.vue'
 </script>
 
 <template>

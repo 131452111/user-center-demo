@@ -34,7 +34,7 @@ const userForm = ref();
 
 // 提交表单
 const submitForm = () => {
-  userForm.value.validate((valid) => {
+  userForm.value.validate((valid: boolean) => {
     if (valid) {
       // 表单校验通过，执行提交操作
       ElMessage.success('提交成功！');

@@ -13,7 +13,7 @@ const images = ref([
 
 const slideIndex = ref(0);
 
-function moveSlide(n) {
+function moveSlide(n: number) {
   let newIndex = slideIndex.value + n;
   if (newIndex >= images.value.length) {
     newIndex = 0;
@@ -23,7 +23,7 @@ function moveSlide(n) {
   slideIndex.value = newIndex;
 }
 
-function setSlide(n) {
+function setSlide(n: number) {
   slideIndex.value = n;
 }
 </script>
