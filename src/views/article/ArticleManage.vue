@@ -114,7 +114,7 @@ const onSuccess = (state: string) => {
     params.value.page_num = lastPage
   }
 }
-
+getData()
 watchEffect(() => {
   onCurrentChange()
 })

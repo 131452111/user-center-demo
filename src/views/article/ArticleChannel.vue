@@ -54,6 +54,8 @@ const onAddChannel = () => {
 const onEditChannel = (row: Article) => {
   dialog.value.open(row)
 }
+
+geta()
 </script>
 
 <template>

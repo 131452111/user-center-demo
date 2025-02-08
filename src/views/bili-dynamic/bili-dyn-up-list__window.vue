@@ -6,51 +6,51 @@
 <div class="biliDynUpListWindow h-28 flex justify-start items-center overflow-hidden bg-white rounded-md relative">
   <ul class="flex justify-start items-center">
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\蒂蒂.jpg')] w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full border-1 border-blue-500"></div>
+      <div class="bg-[url('@/assets/img/蒂蒂.jpg')] w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full border-1 border-blue-500"></div>
       <div class="text-sm text-blue-500">全部动态</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\星宝.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/星宝.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">星宝</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
     <li class="flex justify-center items-center cursor-pointer flex-col ml-5 group">
-      <div class="bg-[url('D:\code\user-center-demo\src\assets\img\甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
+      <div class="bg-[url('@/assets/img/甘雨.jpg')] border-2 border-white group-hover:border-blue-500 group-hover:border-3 w-14 h-14 bg-no-repeat bg-cover bg-center rounded-full"></div>
       <div class="text-sm text-gray-700 group-hover:text-blue-500">甘雨</div>
     </li>
   </ul>

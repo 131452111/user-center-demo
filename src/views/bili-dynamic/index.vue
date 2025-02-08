@@ -45,7 +45,7 @@ onBeforeUnmount(() => {
             <img src="@/assets/img/蒂蒂.jpg" alt="">
           </a>
           <div class="header-right">
-            <a href="#">ホ昜丶</a>
+            <a href="#">ccc</a>
             <a href="#">vip5</a>
           </div>
         </div>

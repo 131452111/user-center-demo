@@ -9,7 +9,7 @@
     </div>
     <div class="user-info" @click="goToLiveroom">
       <h3 @click="goToUserpage">CCC</h3>
-      <p>无敌</p>
+      <p>好无聊~</p>
     </div>
   </div>
 </template>
