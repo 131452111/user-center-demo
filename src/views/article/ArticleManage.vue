@@ -6,7 +6,7 @@ import ChannelSelect from '@/views/article/components/ChannelSelect.vue'
 import { ArticleListStore } from '@/stores/modules/articleManage.ts'
 import { artGetChannelsService } from '@/api/article.ts'
 import { ElMessage, ElMessageBox } from 'element-plus'
-// import ArticleEdit from '@/views/article/components/ArticleEdit.vue'
+import ArticleEdit from '@/views/article/components/ArticleEdit.vue'
 import type { ArticleManageGet } from '@/types'
 
 const ArticleList = ArticleListStore() // 获取ArticleStore实例
@@ -111,13 +111,13 @@ const onCurrentChange = () => {
 }
 
 
-// const onSuccess = (state: string) => {
-//   if (state === 'add') {
-//     // 如果是添加，最好渲染最后一页
-//     const lastPage = (total.value + 1) / params.value.page_size
-//     params.value.page_num = lastPage
-//   }
-// }
+const onSuccess = (state: string) => {
+  if (state === 'add') {
+    // 如果是添加，最好渲染最后一页
+    const lastPage = (total.value + 1) / params.value.page_size
+    params.value.page_num = lastPage
+  }
+}
 
 </script>
 
@@ -127,7 +127,7 @@ const onCurrentChange = () => {
       <el-button type="primary" size="default" @click="onAddArticle"><span class="text-xl">添加文章</span></el-button>
     </template>
     <!-- 表单区域   -->
-    <el-form inline v-model="params" :ref="paramsRef">
+    <el-form inline v-model="params" ref="paramsRef">
       <el-form-item label="文章分类:">
         <Channel-select v-model="params.cate_id" />
       </el-form-item>
@@ -177,7 +177,7 @@ const onCurrentChange = () => {
     />
   </PageContainer>
 
-<!--  <article-edit ref="articleEditRef" @success="onSuccess" />-->
+  <article-edit ref="articleEditRef" @success="onSuccess" />
 </template>
 
 <style scoped lang="less">
