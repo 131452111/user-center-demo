@@ -1,6 +1,8 @@
 import UserLogin from '@/views/user/UserLogin.vue'
 import UserLayout from '@/views/layout/UserLayout.vue'
 import UserRegistered from '@/views/user/UserRegistered.vue'
+import ArticleChannel from '@/views/article/ArticleChannel.vue'
+import ArticleManage from '@/views/article/ArticleManage.vue'
 
 const route = [
   {
@@ -42,12 +44,12 @@ const route = [
           {
             path: 'channel',
             name: '分类',
-            component: () => import('@/views/article/ArticleChannel.vue')
+            component: () => ArticleChannel
           },
           {
             path: 'manage',
             name: '管理',
-            component: () => import('@/views/article/ArticleManage.vue')
+            component: () => ArticleManage
           },
           {
             path: 'info',

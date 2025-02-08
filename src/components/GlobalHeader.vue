@@ -59,7 +59,7 @@ const handleCommand = async (command: string) => {
   >
     <el-menu-item index="0"
       ><a href="/" class="logo flex justify-center items-center" style="flex: 0 0 150px">
-        <img :src="SYSTEM_LOGO" class="w-16 h-16" alt="w" />
+        <img src="../../public/logo.jpg" class="w-16 h-16" alt="w" />
         <div class="title text-3xl ml-6">用户中心</div>
       </a> </el-menu-item
     ><!-- end logo -->
