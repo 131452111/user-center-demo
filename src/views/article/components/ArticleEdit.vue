@@ -19,12 +19,25 @@ const defaultFormModel = {
   content: '', // 文章内容
   state: '', // 状态
 }
-// 准备数据
-const formModel = ref({ ...defaultFormModel })
-const editorRef = ref()
-const open = (row) => {
-  visibleDrawer.value = true // 显示抽屉
 
+interface FormModel {
+  title: string, // 文章标题
+  cate_id: string, // 分类id
+  cover_img: string | File, // 封面图片 file 对象
+  content: string, // 文章内容
+  state: string, // 状态
+}
+// 准备数据
+const formModel = ref<FormModel>({ ...defaultFormModel })
+const editorRef = ref()
+
+interface Article {
+  id: number, title: string, pub_date: string, state: string, cate_name: string
+}
+
+const open = (row: Article) => {
+  visibleDrawer.value = true // 显示抽屉
+  // console.log(row)
   if (row.id) {
     // 编辑
     title.value = '编辑文章'
@@ -55,7 +68,12 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   }
   return true
 }
-const onSelectFile = (uploadFile) => {
+
+interface UploadFile {
+  raw: File; // 或者根据实际情况定义 raw 的类型
+}
+
+const onSelectFile = (uploadFile: UploadFile) => {
   // 获取本地预览的地址
   imgUrl.value = URL.createObjectURL(uploadFile.raw)
   formModel.value.cover_img = uploadFile.raw

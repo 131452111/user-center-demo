@@ -7,7 +7,7 @@ const uploadRef = ref()
 
 // 图片上传
 const imgUrl = ref('')
-const formModel = ref({ cover_img: '' })
+const formModel = ref<{ cover_img: string | File}>({ cover_img: '' })
 const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   if (rawFile.type !== 'image/jpeg') {
     ElMessage.error('Avatar picture must be JPG format!')
@@ -18,7 +18,12 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
   }
   return true
 }
-const onSelectFile = (uploadFile) => {
+
+interface UploadFile {
+  raw: File; // 假设 raw 是一个 File 对象
+}
+
+const onSelectFile = (uploadFile: UploadFile) => {
   // 获取本地预览的地址
   imgUrl.value = URL.createObjectURL(uploadFile.raw)
   formModel.value.cover_img = uploadFile.raw

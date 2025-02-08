@@ -40,7 +40,7 @@ const handleCommand = async (command: string) => {
       }
     )
     userStore.removeToken()
-    userStore.setUserInfo({})
+    userStore.setUserInfo({ avatar: '', email: '', nickname: '', password: '', username: '' })
     router.push({ path: '/user/login'})
   } else {
     router.push({ path: command })

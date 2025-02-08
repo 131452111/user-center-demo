@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 const title = ref([{title: '番剧', url: '#'}, {title: '国创', url: '#'}, {title: '综艺', url: '#'}, {title: '动画', url: '#'}, {title: '鬼畜', url: '#'}, {title: '舞蹈', url: '#'}, {title: '娱乐', url: '#'}, {title: '科技', url: '#'}, {title: '美食', url: '#'}, {title: '汽车', url: '#'}, {title: '运动', url: '#'}, {title: '电影', url: '#'}, {title: '电视剧', url: '#'}, {title: '纪录片', url: '#'}, {title: '游戏', url: '#'}, {title: '音乐', url: '#'}, {title: '影视', url: '#'}, {title: '知识', url: '#'}, {title: '资讯', url: '#'}, {title: '生活', url: '#'}, {title: '时尚', url: '#'}, {title: '更多', url: '#'},])
 </script>

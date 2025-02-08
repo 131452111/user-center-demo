@@ -1,7 +1,7 @@
-<script setup>
+<script setup lang="ts">
   import { ref } from 'vue'
   const isVisible = ref(false)
-  let timer = ref(null) // 存储计时器ID的响应式变量
+  const timer = ref<number | null>(null) // 存储计时器ID的响应式变量
   const starHover = () => {
     // 清除已有的计时器
     if (timer.value) {

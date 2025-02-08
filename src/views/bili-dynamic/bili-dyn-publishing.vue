@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue';
 const isTopicShow = ref(false)
-const TopicShow = () => {
-  isTopicShow.value = !isTopicShow.value
-}
+// const TopicShow = () => {
+//   isTopicShow.value = !isTopicShow.value
+// }
 </script>
 
 <template>

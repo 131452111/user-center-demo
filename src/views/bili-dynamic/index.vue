@@ -6,7 +6,13 @@ import liveUserItem from '@/views/bili-dynamic/bili-dyn-live-users__item.vue';
 import biliDynPublishing from '@/views/bili-dynamic/bili-dyn-publishing.vue';
 import biliDynUpListWindow from '@/views/bili-dynamic/bili-dyn-up-list__window.vue'; /* PartiallyEnd: #3632/scriptSetup.vue */
 import topicPanel from '@/views/bili-dynamic/topic-panel.vue'; /* PartiallyEnd: #3632/scriptSetup.vue */
-import { onBeforeUnmount, onMounted, ref } from 'vue'; // 引入ref函数，用于创建响应式数据
+import { defineComponent, onBeforeUnmount, onMounted, ref } from 'vue' // 引入ref函数，用于创建响应式数据
+
+// 定义主页面名字
+defineComponent({
+  name: 'biliDynamic'
+})
+
 const topicIsShow = ref(false);
 const handleScroll = () => { // 监听滚动事件
   const scrollTop = document.documentElement.scrollTop; // 获取滚动距离
@@ -36,7 +42,7 @@ onBeforeUnmount(() => {
       <div class="bili-dyn-my-info">
         <div class="my-info-header">
           <a href="#" class="header-left">
-            <img src="D:\code\user-center-demo\src\assets\img\蒂蒂.jpg" alt="">
+            <img src="@/assets/img/蒂蒂.jpg" alt="">
           </a>
           <div class="header-right">
             <a href="#">ホ昜丶</a>
@@ -98,7 +104,7 @@ onBeforeUnmount(() => {
   margin: 0 40px;
 }
 .bili_dynamic {
-  background-image: url('D:\code\user-center-demo\src\assets\img\hero.jpg');
+  background-image: url('@/assets/img/hero.jpg');
 }
 .fixed-top {
   position: fixed;

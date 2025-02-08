@@ -7,6 +7,9 @@ import { ref } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import ChannelEdit from '@/views/article/components/ChannelEdit.vue'
 
+interface Article {
+  id: number, cate_name: string, cate_alias: string, time: string | number
+}
 
 const isLoading = ref(false)
 const article = articleStore()
@@ -18,7 +21,7 @@ const geta = async () => {
   isLoading.value = false
 }
 
-const onDelChannel = async (row, $index) => {
+const onDelChannel = async (row: string | number, $index: number) => {
   if (typeof row === 'number') {
     await ElMessageBox.confirm('确定删除该分类吗？', '提示', {
       confirmButtonText: '确定',
@@ -48,8 +51,7 @@ const onAddChannel = () => {
   dialog.value.open({})
 }
 
-const onEditChannel = (row) => {
-  console.log('添加分类')
+const onEditChannel = (row: Article) => {
   dialog.value.open(row)
 }
 </script>

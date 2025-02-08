@@ -28,3 +28,7 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+
+# 不上传dist文件夹
+/dist
+.vercel

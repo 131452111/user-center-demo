@@ -1,7 +1,7 @@
 <template>
   <div class="user-card">
     <div class="avatar">
-      <img src="D:\code\ccc-bili\src\assets\img\蒂蒂.jpg" alt="User Avatar" />
+      <img src="@/assets/img/蒂蒂.jpg" alt="User Avatar" />
     </div>
     <div class="isLiving">
       <el-icon size="10px"><Headset /></el-icon>
@@ -14,8 +14,8 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue';
+<script setup lang="ts">
+
 const goToLiveroom = () => {
   // 跳转到直播间
   window.open('https://live.bilibili.com/123456789', '_blank');

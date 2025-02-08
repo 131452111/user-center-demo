@@ -1,9 +1,15 @@
 <script setup lang="ts">
 import navBar from '@/components/navBar.vue'; // 引入导航栏组件
-import { onBeforeUnmount, onMounted, ref } from 'vue'; // 引入ref函数，用于创建响应式数据
+import { defineComponent, onBeforeUnmount, onMounted, ref } from 'vue' // 引入ref函数，用于创建响应式数据
 import biliFeedLayout from './bili-feed-layout.vue'; // 引入布局组件
 import biliHeader__channel from './bili-header__channel.vue'; // 引入频道头部组件
 import biliVideoCard from './bili-video-card.vue'; // 引入视频卡片组件
+
+// 定义主页面名字
+defineComponent({
+  name: 'biliLayout'
+})
+
 const navIsShow = ref(false); // 创建响应式数据，用于控制导航栏的显示与隐藏
 const handleScroll = () => { // 监听滚动事件
   const scrollTop = document.documentElement.scrollTop; // 获取滚动距离

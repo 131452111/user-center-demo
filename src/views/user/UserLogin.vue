@@ -6,7 +6,7 @@ import { userLoginService } from '@/api/user.ts'
 import { useUserStore } from '@/stores'
 import { useRouter } from 'vue-router'
 
-const loginFormRef = ref(null)
+const loginFormRef = ref()
 const loginForm = ref({
   userAccount: '',
   password: '',
@@ -18,12 +18,13 @@ const loginRules = {
   // required: true 表示必填项，message: '请输入用户名' 表示当用户未输入时，显示的错误提示信息，trigger: 'blur' 表示在失去焦点时触发验证 pattern: /^[a-zA-Z0-9]{6,16}$/ 表示只能输入6-16位的字母或数字
   password: [
     { required: true, message: '请输入密码', trigger: 'blur' },
-    { patten: /^\S{6,16}$/, message: '密码长度为6~16位非空字符', trigger: 'blur' },// min: 6 表示密码的最小长度为6位 max: 16 表示密码的最大长度为16位
+    { pattern: /^\S{6,16}$/, message: '密码长度为6~16位非空字符', trigger: 'blur' },// min: 6 表示密码的最小长度为6位 max: 16 表示密码的最大长度为16位
   ],
   isAgree: [
-    { validator: (rule, value: boolean, callback) => {
+    { validator: (rule: object, value: boolean, callback: (error?: Error | string | null) => void) => {
       // rule 是当前验证规则，value 是当前验证的值，callback 是回调函数 - 相当于 resolve 和 reject
       // 如果校验成功就执行 callback() ，如果校验失败就执行 callback(new Error('错误信息'))
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       value ? callback() : callback(new Error('请阅读并同意用户协议'))
       }, trigger: 'change' } // required 检测不了布尔值，只能检测 null undefined ''（空字符串）
   ]

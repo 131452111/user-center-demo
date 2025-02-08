@@ -2,8 +2,9 @@
 import { ref } from 'vue'
 import { ElMessage } from 'element-plus'
 import { userResiterService } from '@/api/user.ts'
+import router from '@/router'
 
-const registeredFormRef = ref(null)
+const registeredFormRef = ref()
 
 const registeredForm = ref({  // 表单属性
   userAccount: '',
@@ -23,11 +24,12 @@ const rules = {
   userAccount: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
   password: [
     { required: true, message: '请输入密码', trigger: 'blur' },
-    { patten: /^\S{6,16}$/, message: '密码长度为6~16位非空字符', trigger: 'blur' },
+    { pattern: /^\S{6,16}$/, message: '密码长度为6~16位非空字符', trigger: 'blur' },
   ],
   confirmPassword: [
     {required: true, message: '请输入确认密码', trigger: 'blur'},
-    {validator: (rule, valid: string, callback) => {
+    {validator: (rule: object, valid: string, callback: (error?: Error | string | null) => void) => {
+        // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       valid === registeredForm.value.password ? callback() : callback(new Error('两次密码不一致'))
     }, trigger: 'blur'}
   ]
@@ -38,6 +40,7 @@ const registered = async () => {
   if (await registeredFormRef.value.validate()) {
     await userResiterService(registeredForm.value.userAccount, registeredForm.value.password)
     ElMessage.success('注册成功!')
+    router.push('/user/login')
   } else {
     ElMessage.error('表单验证失败!')
   }
