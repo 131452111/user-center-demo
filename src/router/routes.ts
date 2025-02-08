@@ -3,6 +3,7 @@ import UserLayout from '@/views/layout/UserLayout.vue'
 import UserRegistered from '@/views/user/UserRegistered.vue'
 import ArticleChannel from '@/views/article/ArticleChannel.vue'
 import ArticleManage from '@/views/article/ArticleManage.vue'
+import ArticleLayout from '@/views/article/ArticleLayout.vue'
 
 const route = [
   {
@@ -39,7 +40,7 @@ const route = [
       {
         path: 'layout',
         name: '布局',
-        component: () => import('@/views/article/ArticleLayout.vue'),
+        component: ArticleLayout,
         children: [
           {
             path: 'channel',

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import routes from '@/router/routes.ts'
-import { SYSTEM_LOGO } from '@/utils/imgs.ts'
 import router from '@/router'
 import { ref } from 'vue'
 import { useUserStore } from '@/stores'
