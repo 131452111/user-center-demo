@@ -76,6 +76,7 @@ const beforeAvatarUpload: UploadProps['beforeUpload'] = (rawFile) => {
 
 const onSelectFile = (uploadFile: UploadFile) => {
   // 获取本地预览的地址
+  if (!(uploadFile.raw instanceof File)) return
   imgUrl.value = URL.createObjectURL(uploadFile.raw)
   formModel.value.cover_img = uploadFile.raw
   console.log(uploadFile)
