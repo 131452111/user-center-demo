@@ -3,7 +3,7 @@ import PageContainer from '@/views/article/components/PageContainer.vue'
 import { artGetChannelList } from '@/api/article'
 import { articleStore } from '@/stores/modules/article.ts'
 import { Delete, Edit } from '@element-plus/icons-vue'
-import { ref } from 'vue'
+import { ref, watchEffect } from 'vue'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import ChannelEdit from '@/views/article/components/ChannelEdit.vue'
 
@@ -55,7 +55,9 @@ const onEditChannel = (row: Article) => {
   dialog.value.open(row)
 }
 
-geta()
+watchEffect(() => {
+  geta()
+})
 </script>
 
 <template>
