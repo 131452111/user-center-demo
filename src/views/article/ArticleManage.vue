@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import PageContainer from '@/views/article/components/PageContainer.vue'
-import { ref, watchEffect } from 'vue'
+import { ref } from 'vue'
 import { Delete, Edit } from '@element-plus/icons-vue'
 import ChannelSelect from '@/views/article/components/ChannelSelect.vue'
 import { ArticleListStore } from '@/stores/modules/articleManage.ts'
@@ -105,7 +105,7 @@ const onCurrentChange = () => {
   const end = start + params.value.page_size;
   data.value = ArticleList.articleList.slice(start, end);
 }
-onCurrentChange()
+
 
 const onSuccess = (state: string) => {
   if (state === 'add') {
@@ -115,9 +115,6 @@ const onSuccess = (state: string) => {
   }
 }
 
-watchEffect(() => {
-  onCurrentChange()
-})
 </script>
 
 <template>
