@@ -44,12 +44,12 @@ const onReset = () => {
 // 添加文章
 const onAddArticle = () => {
   console.log('添加文章')
-  articleEditRef.value.open({})
+  articleEditRef.value?.open({})
 }
 // 编辑逻辑
 const onEditArticle = (row: object) => {
   console.log(row)
-  articleEditRef.value.open(row)
+  articleEditRef.value?.open(row)
 }
 
 interface Article {
