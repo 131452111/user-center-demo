@@ -9,8 +9,9 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import ArticleEdit from '@/views/article/components/ArticleEdit.vue'
 import type { ArticleManageGet } from '@/types'
 
-const ArticleList = ArticleListStore()
-const data = ref<ArticleManageGet[]>([])
+const ArticleList = ArticleListStore() // 获取ArticleStore实例
+const data = ref<ArticleManageGet[]>(ArticleList.articleList) // 获取数据
+const articleEditRef = ref() // 获取表单的实例
 // 定义请求参数
 const params = ref({
   page_num: 1,
@@ -18,7 +19,8 @@ const params = ref({
   cate_id: '',
   state: '',
 })
-const total = ref(ArticleList.articleList.length)
+const loading = ref(false)  // 加载动画
+const total = ref(ArticleList.articleList.length) // 总条数
 const paramsRef = ref({}) // 获取表单的实例
 
 // 过滤数据
@@ -38,7 +40,7 @@ const onReset = () => {
 
 }
 // 利用作用域插槽 row 可以获取当前行的数据 =>像 v-for 遍历 item
-const articleEditRef = ref()
+
 // 添加文章
 const onAddArticle = () => {
   console.log('添加文章')
@@ -81,7 +83,7 @@ const onDeleteArticle = async (row: Article) => {
 }
 
 // 获取数据
-const loading = ref(false)
+
 const getData = async () => {
   loading.value = true
   const res = await artGetChannelsService(params.value)
@@ -141,7 +143,7 @@ const onSuccess = (state: string) => {
     </el-form>
 
     <!-- 表格区域   -->
-    <el-table :data="data.length === 0 ? ArticleList.articleList : data" v-loading="loading">
+    <el-table :data="data" v-loading="loading">
       <el-table-column label="文章标题" prop="title">
         <template #default="{ row }">
           <el-link :underline="false">{{ row.title }}</el-link>
