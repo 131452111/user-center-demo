@@ -45,12 +45,12 @@ const route = [
           {
             path: 'channel',
             name: '分类',
-            component: () => ArticleChannel
+            component: ArticleChannel
           },
           {
             path: 'manage',
             name: '管理',
-            component: () => ArticleManage
+            component: ArticleManage
           },
           {
             path: 'info',
