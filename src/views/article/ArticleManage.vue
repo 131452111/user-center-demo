@@ -117,7 +117,6 @@ const onSuccess = (state: string) => {
 
 watchEffect(() => {
   onCurrentChange()
-  getData()
 })
 </script>
 
